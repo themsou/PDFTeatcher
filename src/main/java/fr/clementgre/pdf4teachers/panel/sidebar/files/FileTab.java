@@ -267,11 +267,11 @@ public class FileTab extends SideTab {
     public void replaceFile(File oldFile, File newFile){
         files.getItems().replaceAll(testFile -> {
             if(testFile.getAbsolutePath().equals(oldFile.getAbsolutePath())) return newFile;
-            else return testFile;
+            return testFile;
         });
         originalFiles.replaceAll(testFile -> {
             if(testFile.getAbsolutePath().equals(oldFile.getAbsolutePath())) return newFile;
-            else return testFile;
+            return testFile;
         });
         sortManager.simulateCall();
     }
